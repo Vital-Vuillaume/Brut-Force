@@ -26,7 +26,7 @@ inputPassword = wait.until(EC.element_to_be_clickable((By.XPATH, '//input[@class
 start = time.time()
 
 try:
-    with open('text.txt', 'r', encoding='ISO-8859-1') as file:
+    with open('password.txt', 'r', encoding='ISO-8859-1') as file:
         for password in file:
             password = password.strip()
             
@@ -37,8 +37,8 @@ try:
 except Exception as e:
     end = time.time()
     timePassword = end - start
-    print(f"Le bon mdp: {password}")
-    print(f"Le temps: {timePassword}")
+    print(f"The right password: {password}")
+    print(f"The time: {timePassword}")
 
 """
 btn = wait.until(EC.element_to_be_clickable((By.XPATH, '//button[@class="btn"]')))

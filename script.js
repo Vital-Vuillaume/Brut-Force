@@ -11,7 +11,7 @@ let password = "bonjour"
 
 function correctPassword() {
   if(input.value === password) {
-    alert("Le bon mdp");
+    alert("The right password!");
   }
 }
 
@@ -19,7 +19,7 @@ btn.addEventListener("click", function(){
   correctPassword()
 })
 
-input.addEventListener("keydown", function() {
+input.addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
     correctPassword()
   }
