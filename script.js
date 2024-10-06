@@ -16,11 +16,11 @@ function correctPassword() {
 }
 
 btn.addEventListener("click", function(){
-  correctPassword()
+  correctPassword();
 })
 
 input.addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
-    correctPassword()
+    correctPassword();
   }
 })

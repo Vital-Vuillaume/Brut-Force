@@ -10,7 +10,7 @@ import time
 chrome_options = Options()
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
-#chrome_options.add_argument("--headless")
+chrome_options.add_argument("--headless")
 
 chrome_service = Service(executable_path='/usr/bin/chromedriver')
 
@@ -30,11 +30,10 @@ try:
         for password in file:
             password = password.strip()
             
-            inputPassword.send_keys(password)
-            inputPassword.send_keys(Keys.RETURN)
+            inputPassword.send_keys(password + Keys.RETURN)
             inputPassword.clear()
                 
-except Exception as e:
+finally:
     end = time.time()
     timePassword = end - start
     print(f"The right password: {password}")
